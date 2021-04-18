@@ -230,9 +230,12 @@ h1 {
 }
 
 /* * CLI */
+.cli {
+  margin-bottom: 50px;
+}
+
 .cli img {
   width: 65%;
-  height: 230px;
 }
 
 .cli p {
@@ -257,16 +260,24 @@ h1 {
   padding: 30px 0;
 }
 
-.cloudtext{
-  display: flex;
-  flex-direction: column;
+.cloud .grid {
+  display: grid;
+  grid-template-columns: 60% 40%;
   align-items: center;
+}
+
+.cloud img {
+  width: 100%;
+}
+
+.cloudtext{
+  text-align: center;
 }
 
 .cloudtext h2 {
   font-size: 3em;
   font-weight: 100;
-  line-height: 2em;
+  padding: 0.6em 0;
 }
 
 .cloudtext p {
@@ -289,10 +300,6 @@ h1 {
   transform: scale(0.97);
 }
 
-.cloud img{
-  height: 300px;
-}
-
 /* * Supported Languages */
 .language {
   padding: 40px 0px;
@@ -307,20 +314,23 @@ h1 {
 
 .language .flex {
   flex-wrap: wrap;
-  margin: 20px;
+  justify-content: center;
 }
-.langlist div{
+
+.langlist div {
   text-align: center;
-  border: 2px solid #fff ;
+  margin: 20px 10px;
+  border: 2px solid #fff;
   border-radius: 10px;
-  padding: 20px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   transition-duration: 0.2s;
-  /* or */
-  /* transition: transform 0.2s ease-in; */
   position: relative;
   top: 0px;
+  padding: 17px;
+  /* or */
+  /* transition: transform 0.2s ease-in; */
 }
+
 
 .langlist div:hover {
   top: -20px;
