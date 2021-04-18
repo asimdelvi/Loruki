@@ -397,8 +397,28 @@ h1 {
 
 
 /* todo: how to center an element
-  todo: why display: felx; justify-content:center; not centering the container */
+  todo: why display: flex; justify-content:center; not centering the container */
 
+@media (max-width: 768px) {
 
+  .showcase .flex{
+    max-width: 100%;
+    flex-direction: column;
+    /* text-align: center; */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .showcase-text {
+    margin-top: 30px;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .showcase-form {
+    width: 50%;
+  }
+}
 
 
