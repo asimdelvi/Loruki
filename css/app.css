@@ -239,7 +239,6 @@ h1 {
 }
 
 .cli p {
-  /* margin: 50px 0; */
   font-weight: 700;
   font-size: 1.2em;
   color: #333333;
@@ -353,6 +352,7 @@ h1 {
 .foot div{
   width: 40%;
 }
+
 .foot {
   padding: 50px 20px;
   padding-right: 40px;
@@ -381,6 +381,7 @@ h1 {
 .nav li{
   list-style-type: none;
 }
+
 .nav li a {
   color: #e4e4e4;
   text-decoration: none;
@@ -398,9 +399,8 @@ h1 {
 
 /* todo: how to center an element
   todo: why display: flex; justify-content:center; not centering the container */
-
+/* * Tablets */
 @media (max-width: 768px) {
-
   .showcase .flex{
     max-width: 100%;
     flex-direction: column;
@@ -419,6 +419,48 @@ h1 {
   .showcase-form {
     width: 50%;
   }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stats .paragraph {
+    grid-column: auto;
+    max-width: 60%;
+  }
+
+  .cli {
+    flex-direction: column;
+  }
+
+  .cli img{
+    width: 100%;
+  }
+
+  .cli p {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .cloud .grid {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .foot {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 0;
+  }
+
+  .nav li a{
+    padding-left: 20px;
+  }
+
+  .social {
+    padding-left: 10px;
+  }
+
 }
 
 
