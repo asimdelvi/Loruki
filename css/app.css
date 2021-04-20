@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #047aed;
+  --gradiant-color: linear-gradient(180deg, var(--primary-color), #00478f);
 }
 
 * {
@@ -11,35 +12,6 @@
 }
 
 /* * pre-requisits */
-/* body {
-  font-family: Lato, sans-serif;
-  color: #333;
-  line-height: 1.6;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: #333;
-}
-
-h1, h2 {
-  font-weight: 300;
-  line-height: 1.2;
-  margin: 10px 0;
-}
-
-p {
-  margin: 10px 0;
-}
-
-img {
-  width: 100%;
-} */
-
 body {
   font-family: Lato, sans-serif;
 }
@@ -55,7 +27,6 @@ body {
 .flex {
   display: flex;
   justify-content: space-between;
-  padding: 0 40px;
   align-items: center;
   height: 100%;
 }
@@ -65,9 +36,40 @@ h1 {
   font-weight: 100;
 }
 
+h2 {
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.btn {
+  font-weight: 100;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .btn:hover{
   transform: scale(0.97);
   border-color: #d3d3d3;
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+*:focus {
+  outline: none;
 }
 
 /* * Navbar */
@@ -75,15 +77,17 @@ h1 {
   color: #fff;
   background-color: var(--primary-color);
   height: 70px;
+  position: sticky;
+  top: -10px;
+  z-index: 10;
 }
 
+.navbar h1 a,
 .navbar ul li a{
-  text-decoration: none;
   color: #fff;
 }
 
 .navbar ul li{
-  list-style-type: none;
   padding: 10px;
   margin: 0 5px;
   display: inline;
@@ -93,20 +97,18 @@ h1 {
   border-bottom: 2px solid #fff;
 }
 
-*:focus {
-  outline: none;
-}
+
 
 /* * Showcase */
 .showcase{
   color: #fff;
-  background-color: var(--primary-color);
+  background: var(--gradiant-color);
   /* ! din't understood --- why to add relative to get the slant below the showcase*/
-  position: relative;
+  /* position: relative; */
 }
 
 /* !din't understood*/
-.showcase::before,
+/* .showcase::before,
 .showcase::after{
   content: "";
   position: absolute;
@@ -116,16 +118,16 @@ h1 {
   right: 0;
   left: 0;
   transform: skewY(-3deg);
-}
+} */
 
 .showcase-text h2 {
-  font-weight: 300;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin-top: 10px;
 }
 
 .showcase-text {
   max-width: 60%;
+  padding: 0 40px;
 }
 
 .showcase-text p {
@@ -133,31 +135,22 @@ h1 {
   line-height: 1.5em;
 }
 
-.showcase-text button {
-  background-color: var(--primary-color);
-  padding: 15px 30px;
-  font-weight: 100;
+.showcase-text .btn {
+  background-color: transparent;
+  padding: 1em 2em;
   font-size: 1em;
   color: #d8d8d8;
-  border: 1px solid white;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .showcase-form {
   width: 40%;
   font-size: 1.5rem;
-  background-color: white;
   display: flex;
   flex-direction: column;
-  padding: 40px 40px;
+  padding: 40px;
   margin: 10px;
-  border: 2px solid white;
-  border-radius: 10px;
-  size: 3em;
   position: relative;
   top: 60px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 
@@ -175,18 +168,11 @@ h1 {
 }
 
 .showcase-form .btn {
-  border: 1px solid #fff;
   color: #fff;
-  border-radius: 5px;
   width: 100px;
   height: 40px;
   background-color: var(--primary-color);
-  cursor: pointer;
 }
-
-/* .showcase-form input:focus {
-  outline: none;
-} */
 
 /* * Stats */
 .stats {
@@ -195,6 +181,7 @@ h1 {
   grid-template-columns: repeat(3, 2fr);
   justify-content: center;
   color: #333333;
+  font-weight: 700;
 }
 
 .stats .paragraph {
@@ -202,23 +189,19 @@ h1 {
   justify-self: center;
   max-width: 40%;
   text-align: center;
-  font-weight: 700;
-  font-size: 1.15em;
+  font-size: 1.15rem;
   line-height: 1.7em;
 }
 
 .stats div{
-  margin: 40px 0;
-  display: flex;
+  margin: 20px 0;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 10px;
 }
 
 .stats div *:nth-child(2) {
   font-size: 2.1em;
-  font-weight: 700;
   padding-top: 10px;
   padding-bottom: 20px;
 }
@@ -226,7 +209,6 @@ h1 {
 .stats div *:nth-child(3) {
   font-size: 1.2em;
   color: #0052a3;
-  font-weight: 700;
 }
 
 /* * CLI */
@@ -242,10 +224,7 @@ h1 {
   font-weight: 700;
   font-size: 1.2em;
   color: #333333;
-  border: 2px solid white;
   padding: 20px 40px 20px 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .cli p:nth-child(2) {
@@ -274,8 +253,7 @@ h1 {
 }
 
 .cloudtext h2 {
-  font-size: 3em;
-  font-weight: 100;
+  font-size: 3rem;
   padding: 0.6em 0;
 }
 
@@ -284,19 +262,12 @@ h1 {
   padding-bottom: 15px;
 }
 
-.cloudtext button {
+.cloudtext .btn {
   padding: 12px 30px;
-  font-weight: 100;
   font-size: 1em;
   background-color: #00274e;
   border: 1px solid #00274e;
-  border-radius: 5px;
   color: #afc5dd;
-  cursor: pointer;
-}
-
-.cloudtext button:hover {
-  transform: scale(0.97);
 }
 
 /* * Supported Languages */
@@ -307,8 +278,6 @@ h1 {
 .language h2{
   padding-bottom: 40px;
   text-align: center;
-  font-size: 2em;
-  font-weight: 100;
 }
 
 .language .flex {
@@ -319,9 +288,6 @@ h1 {
 .langlist div {
   text-align: center;
   margin: 20px 10px;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   transition-duration: 0.2s;
   position: relative;
   top: 0px;
@@ -353,13 +319,9 @@ h1 {
   width: 40%;
 } */
 
-.foot {
+.footer .flex{
   padding: 50px 20px;
   padding-right: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .footertext {
@@ -367,23 +329,12 @@ h1 {
   color: #fff;
 }
 
-.footertext h2 {
-  font-size: 2em;
-  font-weight: 100;
-}
-
 .footertext p{
   padding: 15px 0;
 }
 
-
-.nav li{
-  list-style-type: none;
-}
-
 .nav li a {
   color: #e4e4e4;
-  text-decoration: none;
   font-weight: 100;
   font-size: 1em;
   line-height: 1.7em;
