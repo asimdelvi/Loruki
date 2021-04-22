@@ -4,4 +4,4 @@
 
 (but its fake)
 
-![Loruki](images/Screenshot%20from%202021-04-12%2014-44-58.png)
+![Loruki](images/Screenshot%20from%202021-04-22%2013-33-16.png)
